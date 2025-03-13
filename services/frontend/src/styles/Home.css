@@ -1,0 +1,14 @@
+.background{
+    background-image: url('../assets/kirby.gif');
+    background-size: cover;
+    background-position: center;
+    font-family: leaf;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 200%;
+    text-align: center;
+    margin: 0;
+}

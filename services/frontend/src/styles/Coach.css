@@ -1,0 +1,73 @@
+.rabbitbackground{
+    background-image: url('../assets/rabbit.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#9fa7d6;
+    font-size: 200%;
+    text-align: center;
+    margin: 0;
+}
+.mainfont {
+    font-family: leaf;
+    font-size: larger;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+.teambutton {
+    background-color: #f5cdd8;
+    border: white;
+    color: black;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: leaf;
+    font-size: large;
+    box-shadow: 0 0 8px rgba(253, 249, 250, 0.5);
+    transition: box-shadow 0.3s ease;
+
+}
+.teambutton:hover {
+    background-color: #fde7d1;
+    color: black;
+    box-shadow: 0 0 12px rgba(245, 205, 216, 0.8);
+}
+.teambutton.selected {
+    background-color: #fde7d1;
+    color: black;
+    box-shadow: 0 0 8px rgba(245, 205, 216, 0.8);
+    transition: box-shadow 0.3s ease;
+}
+.pagebutton {
+    background-color: #fde7d1;
+    border: white;
+    color: black;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: leaf;
+    font-size: large;
+    box-shadow: 0 0 8px rgba(245, 205, 216, 0.8);
+    transition: box-shadow 0.3s ease;
+}
+.pagebutton:hover {
+    background-color: #f5cdd8;
+    color: black;
+    box-shadow: 0 0 12px rgba(245, 205, 216, 0.8);
+}
+.teamCountInput{
+    margin-left: 8px;
+    width: 8%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #000;
+    font-size: 1rem;
+    font-family: leaf;
+    font-size: larger;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
