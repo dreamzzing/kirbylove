@@ -34,7 +34,7 @@ function Coach() {
         window.open(url, '_blank'); // 새 탭에서 열기
     };
 
-    const classCount = regionLetter === 'a' ? 8 : 2;
+    const classCount = regionLetter === 'a' ? 9 : 2;
     const classArray = Array.from({ length: classCount }, (_, i) => i + 1);
     
     return (
@@ -80,7 +80,7 @@ function Coach() {
                     onClick={() => handleClassClick(num)}
                     className={`teambutton ${classLetter === num ? 'selected' : ''}`}
                     >
-                    {num}반
+                    {regionLetter === 'a' && num === 9 ? `전자연계` : `${num}반`}
                     </button>
                 ))}
             </div>
@@ -97,15 +97,25 @@ function Coach() {
 
             <div style={{ marginTop: '20px' }}>
                 {Array.from({ length: teamCount }, (_, i) => {
-                const teamNumber = classLetter * 100 + (i + 1);
-                const url = `https://i12${regionLetter}${teamNumber}.p.ssafy.io`;
+                    var teamNumber = 0;
+                    var SamsungRegionLetter = regionLetter;
+                    var finalTeamNumber = '';
+                    if(classLetter < 9){
+                        teamNumber = classLetter * 100 + (i + 1);
+                        finalTeamNumber = teamNumber;
+                    }
+                    else{
+                        SamsungRegionLetter = `s`
+                        finalTeamNumber = `${String(i+1).padStart(3, '0')}`;
+                    }
+                const url = `https://j12${SamsungRegionLetter}${finalTeamNumber}.p.ssafy.io`;
                 return (
                     <button
                     key={i}
                     onClick={() => handlePageClick(url)}
                     className="pagebutton"
                     >
-                    {regionLetter}{teamNumber}
+                    {SamsungRegionLetter}{finalTeamNumber}
                     </button>
                 );
                 })}
